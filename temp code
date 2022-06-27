@@ -13,8 +13,9 @@ GPIO.setup(6, GPIO.OUT)         #LED output pin
 sound = mixer.Sound('doorbell-1.wav')
 
 def ring():
-    r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/cQ5sQUR5HKWjtu1OnNQ0_L')
+    #r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/cQ5sQUR5HKWjtu1OnNQ0_L')
     r = requests.post(“https://maker.ifttt.com/trigger/trigger/with/key/cQ5sQUR5HKWjtu1OnNQ0_L”, json={“value1” : new_filelink.url})
+    #  AYFpxOiBuT76o5iAxOA7az
     sound.play()
     print("Ding dong!")
 
