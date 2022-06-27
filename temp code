@@ -14,6 +14,7 @@ sound = mixer.Sound('doorbell-1.wav')
 
 def ring():
     r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/cQ5sQUR5HKWjtu1OnNQ0_L')
+    r = requests.post(“https://maker.ifttt.com/trigger/trigger/with/key/cQ5sQUR5HKWjtu1OnNQ0_L”, json={“value1” : new_filelink.url})
     sound.play()
     print("Ding dong!")
 
